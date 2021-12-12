@@ -32,4 +32,9 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     end
   end
+  
+  def counts(micropost)
+    @count_fans = micropost.fans.count
+  end
+  
 end
